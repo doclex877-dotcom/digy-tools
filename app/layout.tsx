@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     siteName: "Digy",
     type: "website",
   },
+  verification: {
+    google: "2GMKOz1cGZc6fUBBAiN1UH3i-PW0OFzxpW3-QqGzfQY",
+  },
 };
 
 export default function RootLayout({
