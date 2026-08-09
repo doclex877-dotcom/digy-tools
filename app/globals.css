@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --color-paper: #FAFAF8;
+  --color-paper-raised: #FFFFFF;
+  --color-ink: #1A1A1A;
+  --color-ink-soft: #55524C;
+  --color-teal: #2D6A62;
+  --color-teal-soft: #E8F1EF;
+  --color-border: #D4D4D0;
+  --color-error: #C4523E;
+  --color-error-soft: #FBEBE8;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-paper-raised: var(--color-paper-raised);
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-teal: var(--color-teal);
+  --color-teal-soft: var(--color-teal-soft);
+  --color-border: var(--color-border);
+  --color-error: var(--color-error);
+  --color-error-soft: var(--color-error-soft);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
